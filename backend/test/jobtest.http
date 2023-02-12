@@ -1,0 +1,57 @@
+POST http://localhost:3000/api/jobs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjNkZDdhNGM0ZWNjMTVmZjg3MWU3Njk3IiwiZnVsbG5hbWUiOiJPbWFyIE1vaGFtbWVkIiwiZW1haWwiOiJhZ2J1cmk4OUBnbWFpbC5jb20iLCJpYXQiOjE2NzU0NjQxMjR9.zb2n4fx9AmtETnoPuBjLK0e9do_0CnBozVoORaU__Qc
+   
+{
+    "job_title": "Java Developer",
+    "salary":10000,
+    "description": "Dream Job",
+    "location":{
+        "state":"IA",
+        "city":"Fairfield",
+        "street":"100 N",
+        "zip":44444
+    },
+    "job_category":{
+     
+      "title": "lll"
+    }
+}
+
+###
+GET http://localhost:3000/api/jobs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjNkZDdhNGM0ZWNjMTVmZjg3MWU3Njk3IiwiZnVsbG5hbWUiOiJPbWFyIE1vaGFtbWVkIiwiZW1haWwiOiJhZ2J1cmk4OUBnbWFpbC5jb20iLCJpYXQiOjE2NzU0NjQxMjR9.zb2n4fx9AmtETnoPuBjLK0e9do_0CnBozVoORaU__Qc
+   
+
+###
+GET http://localhost:3000/api/jobs/63dd8e0ee7cbd2cfa47fcba9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjNkZDdhNGM0ZWNjMTVmZjg3MWU3Njk3IiwiZnVsbG5hbWUiOiJPbWFyIE1vaGFtbWVkIiwiZW1haWwiOiJhZ2J1cmk4OUBnbWFpbC5jb20iLCJpYXQiOjE2NzU0NjQxMjR9.zb2n4fx9AmtETnoPuBjLK0e9do_0CnBozVoORaU__Qc
+
+###
+PUT  http://localhost:3000/api/jobs/63dd8e0ee7cbd2cfa47fcba9
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjNkZDdhNGM0ZWNjMTVmZjg3MWU3Njk3IiwiZnVsbG5hbWUiOiJPbWFyIE1vaGFtbWVkIiwiZW1haWwiOiJhZ2J1cmk4OUBnbWFpbC5jb20iLCJpYXQiOjE2NzU0NjQxMjR9.zb2n4fx9AmtETnoPuBjLK0e9do_0CnBozVoORaU__Qc
+    
+{
+    "job_title": " full Java Developer",
+    "salary":10000,
+    "description": "Dream Job",
+    "location":{
+        "state":"IA",
+        "city":"Fairfield",
+        "street":"100 N",
+        "zip":44444
+    },
+    "job_category":{
+     
+      "title": "lll"
+    }
+}
+
+###
+DELETE http://localhost:3000/api/jobs/63dbbadcd6d17958d5367370
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjNkZDdhNGM0ZWNjMTVmZjg3MWU3Njk3IiwiZnVsbG5hbWUiOiJPbWFyIE1vaGFtbWVkIiwiZW1haWwiOiJhZ2J1cmk4OUBnbWFpbC5jb20iLCJpYXQiOjE2NzU0NjQxMjR9.zb2n4fx9AmtETnoPuBjLK0e9do_0CnBozVoORaU__Qc
+
+###
+GET http://localhost:3000/api/jobs/featuredg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjNkZDdhNGM0ZWNjMTVmZjg3MWU3Njk3IiwiZnVsbG5hbWUiOiJPbWFyIE1vaGFtbWVkIiwiZW1haWwiOiJhZ2J1cmk4OUBnbWFpbC5jb20iLCJpYXQiOjE2NzU0NjQxMjR9.zb2n4fx9AmtETnoPuBjLK0e9do_0CnBozVoORaU__Qc

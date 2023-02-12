@@ -1,0 +1,4 @@
+{
+    "DB_SERVER":"mongodb+srv://root:root@cluster0.oklz1jk.mongodb.net/test",
+    "SECRET": "fdsggdfgdgfghfghfgh"
+}

@@ -1,0 +1,20 @@
+GET http://localhost:3000/api/category
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2RkN2E0YzRlY2MxNWZmODcxZTc2OTciLCJmdWxsbmFtZSI6Ik9tYXIgTW9oYW1tZWQiLCJlbWFpbCI6ImFnYnVyaTg5QGdtYWlsLmNvbSIsImlhdCI6MTY3NTQ2MTEwMH0.3OX43hIWFFAU9Ctl63mOa5yEnFsSf9WIbWHMITSXrpU
+###
+POST http://localhost:3000/api/category
+Content-Type: application/json
+
+
+{
+    "title":"Developer"
+}
+###
+DELETE http://localhost:3000/api/category/63dd7ea1a22d5d6a21b26165
+
+###
+PUT http://localhost:3000/api/category/63dd754dd88ed658efabb85b
+Content-Type: application/json
+
+{
+"title":"Developer"
+}

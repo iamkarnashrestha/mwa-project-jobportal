@@ -1,0 +1,76 @@
+<div class="container" *ngIf="jobs$ | async as jobs">
+  <div style="display: flex; justify-content: space-between">
+    <h4>{{ title }}</h4>
+
+    <a *ngIf="!empcheck" class="btn btn-primary" [routerLink]="['','jobs','add']"
+      >Add Job</a
+    >
+  </div>
+ 
+    <form [formGroup]="form" (ngSubmit)="filterJobs()" >
+      <div class="row" *ngIf="allJobListCheck" style="justify-content: flex-end;"> 
+        
+
+      <div class="form-group col-md-3">
+        
+        <select
+          name=""
+          id=""
+          class="form-control"
+          *ngIf="categories$ | async as categories"
+          formControlName="category"
+          
+        >
+          <option value="all">All Jobs</option>
+          <option *ngFor="let category of categories" [value]="category.title">
+            {{ category.title }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group col-md-2">
+        <button type="submit" class="form-control btn btn-success" (click)="filterJobs()">Filter</button>
+      </div>
+    </div>
+    </form>
+  
+
+  <div *ngIf="jobs.length; else noJobs" class="row">
+    <div
+      *ngFor="let job of jobs"
+      style="margin-bottom: 10px"
+      class="col-md-6 card"
+    >
+      <div class="card-body">
+        <b>Job Title:</b> {{ job.job_title }} <br />
+        <b>Job Category:</b> {{ job.category }} <br />
+        <b>Salary:</b> {{ job.salary }} <br />
+        <b>No of vacancies:</b> {{ job.no_of_vacancy }} <br />
+        <a
+          class="btn btn-success"
+          [routerLink]="['', 'jobs', 'details', job._id]"
+          style="font-size: 12px"
+          >View Details
+        </a>
+        &nbsp;
+        <a
+          *ngIf="!empcheck"
+          class="btn btn-success"
+          [routerLink]="['', 'jobs', 'update', job._id]"
+          style="font-size: 12px"
+          >Update Job </a
+        >&nbsp;
+        <button
+          *ngIf="!empcheck"
+          class="btn btn-danger"
+          (click)="deleteJob(job._id)"
+          style="font-size: 12px"
+        >
+          Delete Job
+        </button>
+      </div>
+    </div>
+  </div>
+  <ng-template #noJobs>
+    <p>There is currently no Jobs</p>
+  </ng-template>
+</div>
